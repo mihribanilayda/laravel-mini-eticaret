@@ -62,7 +62,10 @@
                 <button type="submit" class="btn btn-warning">Sepeti Temizle</button>
             </form>
             <a href="{{ route('products.index') }}" class="btn btn-secondary">Alışverişe Devam Et</a>
-            <a href="#" class="btn btn-success">Sipariş Ver</a>
+            <form action="{{ route('orders.store') }}" method="POST">
+    @csrf
+    <button type="submit" class="btn btn-success">Sipariş Ver</button>
+</form>
         </div>
     @endif
 </div>

@@ -9,6 +9,10 @@
 <body>
 <div class="container mt-4">
     <a href="{{ route('products.index') }}" class="btn btn-secondary mb-3">← Geri</a>
+    <form action="{{ route('cart.add', $product) }}" method="POST" class="mt-3">
+    @csrf
+    <button type="submit" class="btn btn-success">Sepete Ekle</button>
+</form>s
     <div class="card">
         <div class="card-body">
             <h1 class="card-title">{{ $product->name }}</h1>
